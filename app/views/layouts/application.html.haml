@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title AlmondTech
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    // Nav Bar
+    %nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          %a.navbar-brand{ href:root_path, title:"AlmondTech" }
+            %strong AlmondTech
+        %div
+          %ul.nav.navbar-nav
+            %li.active= link_to 'Home', root_path
+        %div
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              = link_to development_coming_soon_path do
+                %span.glyphicon.glyphicon-user
+                Sign Up
+            %li
+              = link_to development_coming_soon_path do
+                %span.glyphicon.glyphicon-log-in
+                Log In
+    .container
+      = yield

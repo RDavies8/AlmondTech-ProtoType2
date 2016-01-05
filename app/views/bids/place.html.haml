@@ -1,0 +1,55 @@
+
+.page-header
+  %h2 Place an Order for Califonia Almonds
+
+.panel.panel-default
+  .panel-body
+    :markdown
+      **Cut out the Middlemen**
+
+      By placing an order here, your offer will automatically be pushed
+      **directly** to California handlers.
+
+
+%form{ action:bids_completed_path, method:'GET' }
+  .form-group.row
+    %label.col-xs-2.form-control-label Email
+    .col-xs-10
+      %input.form-control
+
+  .form-group.row
+    %label.col-xs-2.form-control-label Type 
+    .col-xs-10
+      %select.form-control
+        %option{disabled:true, selected:true} -- Select --
+        %option Nonpareil
+        %option Califonia
+        %option Mission
+        %option{disabled:true} (More Varieties To Come)
+
+  .form-group.row
+    %label.col-xs-2.form-control-label LBs 
+    .col-xs-10
+      %input.form-control
+      %span.text-muted.pull-right
+        Current Estimated Price/LB: $3.93
+
+
+  .form-group.row
+    %label.col-xs-2.form-control-label Quality 
+    .col-xs-10
+      %input.form-control
+
+  .form-group.row
+    %label.col-xs-2.form-control-label Asking Price 
+    .col-xs-10
+      %input.form-control
+
+  .form-group.row
+    %label.col-xs-2.form-control-label Notes to Seller 
+    .col-xs-10
+      %textarea.form-control
+
+  %button.btn.btn-primary.pull-right Submit
+  
+  
